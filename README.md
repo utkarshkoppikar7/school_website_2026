@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sheela Koppikar Vidya Mandir (SKVM)
 
-## Getting Started
+The official website for **Sheela Koppikar Vidya Mandir, Dharwad** — a school
+established in 1986, built around the idea of *building leaders with heart & soul*.
 
-First, run the development server:
+This is a fast, dependency-free static website: plain HTML, CSS and JavaScript.
+There is no build step and no framework to install.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Pages
+
+| Page | File |
+| --- | --- |
+| Home | `index.html` |
+| About | `about.html` |
+| Academics | `academics.html` |
+| Admissions | `admissions.html` |
+| Admission Process | `admission-process.html` |
+| Events | `events.html` |
+| Life at SKVM | `life-at-skvm.html` |
+| Monthly Competitions | `monthly-competitions.html` |
+| School Assembly | `school-assembly.html` |
+| Sports | `sports.html` |
+| Classroom Activities | `classroom-activities.html` |
+| Mental Math | `mental-math.html` |
+| Spell Bee | `spell-bee.html` |
+| Sambhramada Shanivaar | `sambhramada-shanivaar.html` |
+| Science Exhibition | `science-exhibition.html` |
+| Contact | `contact.html` |
+
+## Project structure
+
+```
+.
+├── index.html                 # 16 static pages
+├── *.html
+├── css/
+│   └── styles.css             # All site styles
+├── js/
+│   └── main.js                # Mobile nav, scroll reveal, small interactions
+└── assets/
+    └── images/                # Photos used across the site
+        └── gallery/           # Event and activity gallery images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+No installation required. Either:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Open `index.html` directly in a browser, **or**
+2. Serve the folder locally (recommended):
 
-## Learn More
+   ```bash
+   python -m http.server 8000
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+   Then visit <http://localhost:8000>.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The site works on any static host. For GitHub Pages:
 
-## Deploy on Vercel
+1. Go to **Settings → Pages** in this repository.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select the **main** branch and the **/ (root)** folder, then save.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The included `.nojekyll` file tells GitHub Pages to serve the files as-is.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Editing
+
+- **Content:** edit the relevant `.html` file directly.
+- **Styling:** all styles live in `css/styles.css`.
+- **Behaviour:** navigation and scroll effects live in `js/main.js`.
+- **Images:** add or replace files in `assets/images/` and update the `src`
+  attributes that reference them.
+
+## License
+
+All content and photographs belong to Sheela Koppikar Vidya Mandir.
